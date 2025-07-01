@@ -5,5 +5,5 @@ import { ghPages } from 'vite-plugin-gh-pages'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/monster-cat-recreation'
+  base: '/monster-cat-recreation-app'
 })
