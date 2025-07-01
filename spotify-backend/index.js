@@ -5,13 +5,16 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: "https://mr-azeez.github.io/monster-cat-recreation-app"
+}));
 
 const Client_ID = process.env.SPOTIFY_CLIENT_ID;
 const Client_Secret = process.env.SPOTIFY_CLIENT_SECRET;
 
-console.log("🧪 Client ID:", Client_ID);
-console.log("🧪 Client Secret:", Client_Secret ? "Exists ✅" : "Missing ❌");
+console.log("Client ID:", Client_ID);
+console.log("Client Secret:", Client_Secret ? "Exists" : "Missing");
 
 app.get("/api/token", async (req, res) => {
   try {

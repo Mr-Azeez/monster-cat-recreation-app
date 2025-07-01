@@ -19,7 +19,7 @@ function Section2() {
   useEffect(() => {
     const fetchAlbum = async () => {
       const tokenRes = await fetch(
-        "https://monster-cat-backend.onrender.com/api/token"
+        `${import.meta.env.VITE_API_URL}/api/token`
       );
       const { access_token } = await tokenRes.json();
 
