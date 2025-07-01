@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Monument Extended";
+  src: url("/src/assets/MonumentExtended/MonumentExtended-Regular.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section2 {
+  text-transform: uppercase;
+}
+
+.section2 h1 {
+  font-family: "Monument Extended", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+}
+
+.section2 ul {
+  padding-inline-start: 0;
+}
+
+.stream-platforms ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stream-platforms li {
+  list-style: none;
+  padding: 25px;
+  border: 1px solid #fff;
+}
+table {
+  border-spacing: 2px;
+  text-indent: initial;
+  width: 100%;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+tr {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border-collapse: collapse;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 20px;
+}
+tr .track-number {
+  padding: 10px;
+  margin-inline-end: 70px;
+}
+tr .track-duration {
+    display: block; 
+    margin-left: auto;
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    padding-right: 50px;
+
+}
+tr button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+tr .play-icon {
+  position: absolute;
+  left: 50px;
+  cursor: pointer;
+}
+tr .share-icon {
+    margin-left: auto;
+}
+
+td {
+  display: table-cell;
+}
+.track-title {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+.track-title span {
+  font-size: 14px;
+  /* line-height: 0; */
+  /* position: absolute; */
+  font-weight: bold;
+}
+
+
+@media(max-width: 768px){
+  .section2 h1 {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 520px) {
+  .section2 h1 {
+    font-size: 1rem;
+}
+.stream-platforms li {
+  padding: 15px;
+}
+}
+@media(max-width: 400px) {
+  .album-image {
+    width: 300px;
+    height: 300px;
+}
+.album-details a {
+  padding: 1rem 1rem;
+  margin-block: 1rem;
+  font-size: 14px;
+  display: block;
+}
+.stream-platforms li {
+  padding: 10px;
+}
+}

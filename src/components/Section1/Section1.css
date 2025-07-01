@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Monument Extended";
+    src: url("/src/assets/MonumentExtended/MonumentExtended-Regular.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+.album-intro {
+    font-family: "Monument Extended", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 3rem;
+    margin-block: 5rem;
+    padding-top: 5rem;
+    color: #f1f1f1;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.album-image {
+    width: 408px;
+    height: 408px;
+    position: relative;
+}
+
+.album-image .release-date {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: normal;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: absolute;
+    left: -25px;
+    bottom: 0;
+}
+.album-image .release-date span {
+    color: #50a584;
+}
+.album-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+}
+
+.album-details h1 {
+    word-break: break-word;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-block: 2rem;
+}
+
+.album-details p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    margin-block: 2rem;
+    letter-spacing: 0.1em;
+}
+
+.album-details a {
+    /* height: 25px; */
+    padding: 1rem 1.6em;
+    font-size: 17px;
+    position: relative;
+    display: inline;
+    margin: auto 3px;
+    transition:  all 100ms linear; 
+    cursor: pointer;   
+}
+
+.album-details .button {
+    background-color: #50a584;
+    border: none;
+    padding-inline-start: 40px;
+}
+
+.album-details a {
+    border: 1px solid white;
+}
+
+.play-icon {
+    position: absolute;
+    left:10px;
+    top: 10px;
+}
+@media (min-width: 1000px){
+    .album-details {
+        grid-column: 3 / 6;
+    }
+    .album-image {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 1000px){
+    .album-intro {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        margin-top: 3rem;
+        max-width: 768px;
+        width: 100%;
+        text-align: left;
+        align-items: start;
+        place-items: start;
+        margin-bottom: 50px;
+    }
+    .album-intro p {
+        margin-bottom: 20px;
+    }
+    .album-image {
+        width: 600px;
+        height: 600px;
+    }
+    .album-details a {
+        font-size: 12px;
+        padding-block: 1.1rem;
+    }
+}
+
+@media(min-width: 768px){
+    .album-intro {
+        margin-top: 7rem;
+    }
+}
+
+@media(max-width: 768px){
+    .album-image {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 60px;
+    }
+    .album-image .release-date {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        bottom: -60px;
+        left: 0;
+    }
+    .album-intro h1, .album-intro p  {
+        font-size: 1.6rem;
+        margin-block: 1rem;
+    }
+    .album-details {    
+        margin: 0;
+    }
+    .album-details .button {
+        margin-inline:0 15px;
+    }
+}

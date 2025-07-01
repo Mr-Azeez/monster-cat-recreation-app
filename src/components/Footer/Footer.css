@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+footer {
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+.footer-container {
+  font-family: "Monument Extended", "Helvetica", Arial, sans-serif;
+}
+.footer-container hr {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+ul {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 0em 1em;
+}
+
+nav div p {
+  letter-spacing: 0.1em;
+  margin-block: 1rem;
+}
+
+nav div .news-title {
+  color: #898888;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+nav div .news-desc {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.75;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+
+nav form {
+  margin-top: 2rem;
+  border-bottom: 1px solid #3e3b3c;
+  display: flex;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+nav form input {
+  flex: 1;
+  font-size: 18px;
+  background: transparent;
+  color: white;
+  border-radius: 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+nav form button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-footer p {
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bottom-footer ul {
+  list-style-type: disc;
+}
+
+.bottom-footer ul li {
+  margin-right: 0.5em;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.footer-acknowledgment1, .footer-acknowledgment2 {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+
+.footer-acknowledgment1 {
+  padding-top: 4rem;
+}
+.footer-acknowledgment2 {
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  nav .news-title {
+    font-size: 18px;
+  }
+  .bottom-footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bottom-footer::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+  .bottom-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .bottom-footer div ul {
+    float: right;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    padding-inline: 0;
+  }
+}
