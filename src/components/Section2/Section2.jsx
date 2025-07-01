@@ -18,7 +18,9 @@ function Section2() {
 
   useEffect(() => {
     const fetchAlbum = async () => {
-      const tokenRes = await fetch("http://localhost:3001/api/token");
+      const tokenRes = await fetch(
+        "https://monster-cat-backend.onrender.com/api/token"
+      );
       const { access_token } = await tokenRes.json();
 
       const response = await fetch(
