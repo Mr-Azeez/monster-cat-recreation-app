@@ -1,9 +1,9 @@
 {
-  "name": "monster-cat-recreation",
+  "name": "monster-cat-recreation-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Mr-Azeez/monster-cat-recreation",
+  "homepage": "https://github.com/Mr-Azeez/monster-cat-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
