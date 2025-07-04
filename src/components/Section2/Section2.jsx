@@ -45,11 +45,17 @@ function Section2() {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 
+  function playOnYoutube(track){
+    const query = `${track.name} ${track.artists[0].name}`.replace(/\s+/g, '+');
+    const searchUrl = `https://www.youtube.com/results?search_query=${query}`;
+    window.open(searchUrl, '_blank');
+  }
+
   if (!album) {
     return <div>Loading...</div>;
   }
 
-  // console.log(album.tracks.items);
+  // console.log(album.tracks.href);
 
   return (
     <div className="section2">
@@ -114,7 +120,7 @@ function Section2() {
                 <td>
                   <button
                     onClick={() =>
-                      new Audio(track.external_urls.spotify).play()
+                      playOnYoutube(track)
                     }
                   >
                     <BsPlay size={30} className="play-icon" />
